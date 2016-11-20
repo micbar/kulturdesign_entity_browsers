@@ -8,7 +8,6 @@ dependencies:
   - entity_browser_entity_form
   - file
   - image
-  - kulturdesign_paragraphs
   - lightning_media
   - lightning_media_document
   - lightning_media_image
