@@ -1,0 +1,24 @@
+name: 'KulturDesign Entity Browsers'
+description: 'Provides Entity Browsers'
+type: module
+core: 8.x
+dependencies:
+  - dropzonejs_eb_widget
+  - entity_browser
+  - entity_browser_entity_form
+  - file
+  - image
+  - kulturdesign_paragraphs
+  - lightning_media
+  - lightning_media_document
+  - lightning_media_image
+  - lightning_media_instagram
+  - lightning_media_twitter
+  - lightning_media_video
+  - media_entity
+  - media_entity_audio
+  - user
+  - views
+  - views_infinite_scroll
+version: 8.x-1.0
+package: KulturDesign

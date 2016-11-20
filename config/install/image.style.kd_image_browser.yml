@@ -1,0 +1,14 @@
+langcode: de
+status: true
+dependencies: {  }
+name: kd_image_browser
+label: 'Image Browser (450x450)'
+effects:
+  063779a7-6794-4c1a-adcd-cdb9a1f86cfb:
+    uuid: 063779a7-6794-4c1a-adcd-cdb9a1f86cfb
+    id: image_scale
+    weight: 1
+    data:
+      width: 450
+      height: 450
+      upscale: false

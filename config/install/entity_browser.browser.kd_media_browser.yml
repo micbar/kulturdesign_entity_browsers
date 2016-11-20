@@ -1,0 +1,56 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - entity_browser_entity_form
+    - lightning_media
+    - views
+name: kd_media_browser
+label: 'KD Media Browser'
+display: modal
+display_configuration:
+  width: ''
+  height: '600'
+  link_text: 'Medien auswählen'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  9269fd54-615e-4bfd-beb7-65cfe6bff960:
+    settings:
+      view: kulturdesign_entity_browsers
+      view_display: entity_browser_2
+      submit_text: 'Medien auswählen'
+    uuid: 9269fd54-615e-4bfd-beb7-65cfe6bff960
+    weight: -10
+    label: 'Medien Bibliothek'
+    id: view
+  1d80a023-c2fe-4f07-b524-473127a049a0:
+    settings:
+      entity_type: media
+      bundle: audio
+      form_mode: default
+      submit_text: 'Audio Track speichern'
+    uuid: 1d80a023-c2fe-4f07-b524-473127a049a0
+    weight: -9
+    label: 'Audio Track hochladen'
+    id: entity_form
+  1654e145-dc55-458f-b361-3447100dd0cd:
+    settings:
+      submit_text: Einbetten
+    uuid: 1654e145-dc55-458f-b361-3447100dd0cd
+    weight: -7
+    label: 'Remote Einbetten'
+    id: embed_code
+  d5eb3fdc-8d94-4f85-9e7b-4d3db76225bc:
+    settings:
+      entity_type: media
+      bundle: document
+      form_mode: default
+      submit_text: 'Dokument Speichern'
+    uuid: d5eb3fdc-8d94-4f85-9e7b-4d3db76225bc
+    weight: -8
+    label: 'Dokument hochladen'
+    id: entity_form
