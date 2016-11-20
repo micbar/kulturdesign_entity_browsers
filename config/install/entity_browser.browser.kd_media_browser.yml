@@ -1,15 +1,19 @@
 langcode: de
 status: true
 dependencies:
+  config:
+    - media_entity.bundle.image
   module:
+    - dropzonejs_eb_widget
     - entity_browser_entity_form
     - lightning_media
+    - media_entity
     - views
 name: kd_media_browser
 label: 'KD Media Browser'
 display: modal
 display_configuration:
-  width: ''
+  width: '1200'
   height: '600'
   link_text: 'Medien auswählen'
   auto_open: false
@@ -54,3 +58,15 @@ widgets:
     weight: -8
     label: 'Dokument hochladen'
     id: entity_form
+  d4a789a6-d11e-4826-acc8-cb776de43254:
+    settings:
+      media_entity_bundle: image
+      upload_location: 'public://images/[current-user:uid]/[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Bilder hierher ziehen und loslassen.'
+      max_filesize: 32M
+      extensions: 'jpg jpeg gif png'
+      submit_text: 'Bilder speichern'
+    uuid: d4a789a6-d11e-4826-acc8-cb776de43254
+    weight: 5
+    label: 'Bilder hochladen'
+    id: dropzonejs_media_entity_inline_entity_form

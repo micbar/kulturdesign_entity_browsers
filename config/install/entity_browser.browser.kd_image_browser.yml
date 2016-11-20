@@ -1,14 +1,17 @@
 langcode: de
 status: true
 dependencies:
+  config:
+    - media_entity.bundle.image
   module:
     - dropzonejs_eb_widget
+    - media_entity
     - views
 name: kd_image_browser
 label: 'KD Image Browser'
 display: modal
 display_configuration:
-  width: ''
+  width: '1200'
   height: '600'
   link_text: 'Bilder auswählen'
   auto_open: false
@@ -33,14 +36,15 @@ widgets:
     weight: -10
     label: 'Bilder Bibliothek'
     id: view
-  5b15a7ee-9e8b-4698-8f45-cd19cfdede0a:
+  2d56ebba-687e-4164-b24a-7b3109917a71:
     settings:
+      media_entity_bundle: image
       upload_location: 'public://images/[current-user:uid]/[date:custom:Y]-[date:custom:m]'
       dropzone_description: 'Bilder hierher ziehen und loslassen.'
       max_filesize: 32M
       extensions: 'jpg jpeg gif png'
       submit_text: 'Bilder speichern'
-    uuid: 5b15a7ee-9e8b-4698-8f45-cd19cfdede0a
-    weight: 4
+    uuid: 2d56ebba-687e-4164-b24a-7b3109917a71
+    weight: 2
     label: 'Bilder hochladen'
-    id: dropzonejs
+    id: dropzonejs_media_entity_inline_entity_form
