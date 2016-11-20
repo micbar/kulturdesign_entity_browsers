@@ -14,7 +14,13 @@ display_configuration:
   auto_open: false
   path: kdimagebrowser
 selection_display: no_display
-selection_display_configuration: {  }
+selection_display_configuration:
+  entity_type: media
+  display: rendered_entity
+  display_settings:
+    view_mode: embedded
+  select_text: 'Use selected'
+  selection_hidden: false
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
