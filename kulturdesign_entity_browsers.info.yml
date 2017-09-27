@@ -8,6 +8,7 @@ dependencies:
   - entity_browser_entity_form
   - file
   - image
+  - kulturdesign_media_audio
   - kulturdesign_paragraphs
   - lightning_media
   - lightning_media_document
@@ -17,6 +18,7 @@ dependencies:
   - lightning_media_video
   - media_entity
   - media_entity_audio
+  - media_entity_document
   - user
   - views
   - views_infinite_scroll

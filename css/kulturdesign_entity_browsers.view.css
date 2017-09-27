@@ -23,7 +23,7 @@
 @media only screen and (min-width: 480px) {
     .grid-sizer,
     .grid-item {
-        width: 47%;
+        width: 31%;
     }
     .gutter-sizer {
         width: 20px;
@@ -33,7 +33,7 @@
 @media only screen and (min-width: 768px) {
     .grid-sizer,
     .grid-item {
-        width: 31%;
+        width: 23%;
     }
     .gutter-sizer {
         width: 20px;
@@ -43,7 +43,7 @@
 @media only screen and (min-width: 992px) {
     .grid-sizer,
     .grid-item {
-        width: 23%;
+        width: 15%;
     }
     .gutter-sizer {
         width: 20px;
@@ -136,12 +136,13 @@
 
 .grid-item-info-left,
 .grid-item-info-right {
-    padding: 5px;
+    padding: 2px 5px;
     color: white;
 }
 
 .grid-item-info-left {
     float: left;
+    width: 90%;
     text-align: left;
     white-space: nowrap;
     overflow: hidden;
@@ -150,6 +151,7 @@
 
 .grid-item-info-right {
     float: right;
+    color: #3395d2;
 }
 
 .kulturdesign-entity-browser-form {

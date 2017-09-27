@@ -1,0 +1,84 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+    - views.view.kulturdesign_entity_browsers
+  module:
+    - dropzonejs_eb_widget
+    - entity_browser_entity_form
+    - lightning_media
+    - media_entity
+    - media_entity_document
+    - views
+name: kulturdesign_media_browser
+label: 'KulturDesign Media Browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Medien auswählen'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration:
+  entity_type: media
+  display: rendered_entity
+  display_settings:
+    view_mode: thumbnail
+  select_text: 'Auswahl speichern'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  d8624682-86a4-458e-b235-deb364402df3:
+    settings:
+      entity_type: media
+      bundle: audio
+      form_mode: default
+      submit_text: 'Audio Track speichern'
+    uuid: d8624682-86a4-458e-b235-deb364402df3
+    weight: -8
+    label: 'Audio Tracks'
+    id: entity_form
+  8c07e318-b18b-4aeb-b4d1-6a40794a08c0:
+    settings:
+      form_mode: default
+      media_entity_bundle: image
+      upload_location: 'public://files/images/[date:custom:m]-[date:custom:Y]'
+      dropzone_description: 'Ziehen Sie Bilder hierher und lassen Sie die Maustaste los.'
+      max_filesize: 32M
+      extensions: 'jpg jpeg gif png '
+      submit_text: 'Bild(er) speichern'
+    uuid: 8c07e318-b18b-4aeb-b4d1-6a40794a08c0
+    weight: -9
+    label: 'Bilder hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  1e10c5dd-af25-4360-af2d-51769126b4fe:
+    settings:
+      submit_text: 'Medien speichern'
+      form_mode: media_browser
+    uuid: 1e10c5dd-af25-4360-af2d-51769126b4fe
+    weight: -7
+    label: 'Internet Medien (z.B. Youtube, Twitter) einbinden'
+    id: embed_code
+  49f02149-67b3-47bc-b55b-f7d6ae6fb924:
+    settings:
+      extensions: 'txt, pdf, doc, docx, odt, rtf, csv, xls'
+      media_bundle: document
+      upload_location: 'public://files/documents/[date:custom:m]-[date:custom:Y]'
+      multiple: '1'
+      submit_text: 'Dokumente speichern'
+    uuid: 49f02149-67b3-47bc-b55b-f7d6ae6fb924
+    weight: -6
+    label: 'Dokumente (pdf, doc usw.) hochladen'
+    id: media_entity_document_upload
+  96d7b889-1a0f-46bd-a192-6fa49bdaaddc:
+    settings:
+      view: kulturdesign_entity_browsers
+      view_display: entity_browser_2
+      submit_text: 'Medien speichern'
+      auto_select: false
+    uuid: 96d7b889-1a0f-46bd-a192-6fa49bdaaddc
+    weight: -10
+    label: Medienbibliothek
+    id: view

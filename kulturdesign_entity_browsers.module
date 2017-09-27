@@ -7,8 +7,8 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function kulturdesign_entity_browsers_form_alter(&$form, FormStateInterface &$form_state) {
 	if (isset($form['#form_id'])) {
-		if ($form['#form_id'] == 'entity_browser_kd_image_browser_form' ||
-        $form['#form_id'] == 'entity_browser_kd_media_browser_form') {
+		if ($form['#form_id'] == 'entity_browser_kulturdesign_image_browser_form' ||
+        $form['#form_id'] == 'entity_browser_kulturdesign_media_browser_form') {
 // Attach our library.
 			$form['#attached']['library'][] = 'kulturdesign_entity_browsers/view';
 			$form['#attached']['library'][] = 'kulturdesign_entity_browsers/dropzone_css';

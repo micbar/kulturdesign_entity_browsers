@@ -1,0 +1,52 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+    - views.view.kulturdesign_entity_browsers
+  module:
+    - dropzonejs_eb_widget
+    - media_entity
+    - views
+name: kulturdesign_image_browser
+label: 'KulturDesign Image Browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Bild(er) auswählen'
+  auto_open: false
+selection_display: multi_step_display
+selection_display_configuration:
+  entity_type: media
+  display: rendered_entity
+  display_settings:
+    view_mode: thumbnail
+  select_text: 'Auswahl speichern'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  06d5b7ad-029f-45eb-80c2-b326aa3b2784:
+    settings:
+      form_mode: default
+      media_entity_bundle: image
+      upload_location: 'public://files/images/[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Bilder hierher ziehen und Maustaste loslassen'
+      max_filesize: 32M
+      extensions: 'jpg jpeg gif png'
+      submit_text: 'Bild(er) speichern'
+    uuid: 06d5b7ad-029f-45eb-80c2-b326aa3b2784
+    weight: 1
+    label: 'Bilder hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  7184c7f1-8f7c-4a26-a674-a67ee524c00c:
+    settings:
+      view: kulturdesign_entity_browsers
+      view_display: entity_browser_1
+      submit_text: 'Bild(er) einfügen'
+      auto_select: false
+    uuid: 7184c7f1-8f7c-4a26-a674-a67ee524c00c
+    weight: 2
+    label: 'Bilder Bibliothek'
+    id: view
