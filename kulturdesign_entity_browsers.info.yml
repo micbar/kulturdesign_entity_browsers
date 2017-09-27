@@ -9,7 +9,6 @@ dependencies:
   - file
   - image
   - kulturdesign_media_audio
-  - kulturdesign_paragraphs
   - lightning_media
   - lightning_media_document
   - lightning_media_image
